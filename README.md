@@ -1,0 +1,2 @@
+# Fafnir
+Netcore Throttle Service
