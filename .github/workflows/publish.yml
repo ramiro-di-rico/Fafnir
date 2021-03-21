@@ -1,9 +1,10 @@
 name: publish to nuget
 on:
   push:
+    branches: [ main ]
     # Sequence of patterns matched against refs/tags
-    tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+    #tags:
+    #  - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 jobs:
   publish:
     name: build, pack & publish
@@ -22,7 +23,7 @@ jobs:
         uses: rohith/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Fafnir.Throttle/Fafnir.Throttle.csproj
+          PROJECT_FILE_PATH: ./Fafnir.Throttle/Fafnir.Throttle.csproj
           
           # NuGet package id, used for version detection & defaults to project name
           PACKAGE_NAME: Fafnir.Throttle
