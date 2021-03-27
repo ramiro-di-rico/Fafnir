@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,21 +19,13 @@ namespace Fafnir.Throttle
 
         internal List<ClientAddress> Clients { get; }
 
-        private void SaveTable()
-        {
-            _memoryCache.Set(nameof(ThrottleService), Clients);
-        }
-
         public bool IsAllowed(string address)
         {
             if (Clients.Any(x => x.Address.Equals(address)))
             {
                 var client = Clients.First(x => x.Address.Equals(address));
 
-                var endBan = client.LastRequest < DateTime.Now.Subtract(throttleConfiguration.PenaltyTime);
-                var periodClearing = client.LastRequest < DateTime.Now.Subtract(throttleConfiguration.Period);
-
-                if (endBan || (periodClearing && !client.IsBan))
+                if (client.EndBan(throttleConfiguration.PenaltyTime) || client.ShouldClear(throttleConfiguration.Period))
                 {
                     client.Clear();
                 }
@@ -47,14 +38,24 @@ namespace Fafnir.Throttle
             }
             else
             {
-                var client = new ClientAddress { Address = address };
-                client.IncreaseCounter();
-                Clients.Add(client);
+                AddClient(address);
             }
 
             SaveTable();
 
             return true;
+        }
+
+        private void AddClient(string address)
+        {
+            var client = new ClientAddress { Address = address };
+            client.IncreaseCounter();
+            Clients.Add(client);
+        }
+
+        private void SaveTable()
+        {
+            _memoryCache.Set(nameof(ThrottleService), Clients);
         }
     }
 }

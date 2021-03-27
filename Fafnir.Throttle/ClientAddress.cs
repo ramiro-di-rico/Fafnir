@@ -20,5 +20,8 @@ namespace Fafnir.Throttle
             RquestsCount++;
             LastRequest = DateTime.Now;
         }
+
+        public bool EndBan(TimeSpan penalty) => LastRequest < DateTime.Now.Subtract(penalty);
+        public bool ShouldClear(TimeSpan period) => LastRequest < DateTime.Now.Subtract(period) && !IsBan;
     }
 }
