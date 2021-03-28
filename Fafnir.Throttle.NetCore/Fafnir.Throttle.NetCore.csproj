@@ -19,7 +19,7 @@
 		<PackageProjectUrl>https://github.com/ramiro-di-rico/Fafnir</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/ramiro-di-rico/Fafnir</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>0.0.2.4</Version>
+		<Version>0.0.3</Version>
 	</PropertyGroup>
 
 </Project>
