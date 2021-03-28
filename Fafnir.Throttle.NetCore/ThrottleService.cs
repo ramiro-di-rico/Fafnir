@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Fafnir.Throttle
+namespace Fafnir.Throttle.NetCore
 {
     public class ThrottleService : IThrottleService
     {

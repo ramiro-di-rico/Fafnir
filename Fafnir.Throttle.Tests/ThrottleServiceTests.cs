@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
-namespace Fafnir.Throttle.Tests
+namespace Fafnir.Throttle.NetCore.Tests
 {
     [ExcludeFromCodeCoverage]
     public class ThrottleServiceTests

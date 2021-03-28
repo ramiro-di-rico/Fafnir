@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Bogus" Version="33.0.2" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.1.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
@@ -24,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Fafnir.Throttle.NetCore\Fafnir.Throttle.NetCore.csproj" />
     <ProjectReference Include="..\Fafnir.Throttle\Fafnir.Throttle.csproj" />
   </ItemGroup>
 
