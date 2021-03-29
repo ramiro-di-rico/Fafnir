@@ -20,7 +20,7 @@ namespace Fafnir.Throttle.NetCore
 
             if (!throttleService.IsAllowed(address))
             {
-                httpContext.Response.StatusCode = 403;
+                httpContext.Response.StatusCode = 429;
 
                 await httpContext.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(throttleOptions.Value.ErrorMessage));
 
