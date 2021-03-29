@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Fafnir.Throttle
+namespace Fafnir.Throttle.NetCore
 {
     public class ClientAddress
     {

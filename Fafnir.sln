@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fafnir.Throttle", "Fafnir.Throttle\Fafnir.Throttle.csproj", "{6D47FEC0-FB14-4624-80AA-CF5884C145CE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fafnir.Throttle.NetCore.Tests", "Fafnir.Throttle.Tests\Fafnir.Throttle.NetCore.Tests.csproj", "{AC1DCF35-02C4-4B3B-8143-2FA219BD36F9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fafnir.Throttle.NetCore", "Fafnir.Throttle.NetCore\Fafnir.Throttle.NetCore.csproj", "{94D2E839-4BD2-4336-804F-853BE5783B0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fafnir.Example", "Fafnir.Example\Fafnir.Example.csproj", "{57B5F81C-912C-4CED-BE69-388FE96DF6E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fafnir.Example", "Fafnir.Example\Fafnir.Example.csproj", "{57B5F81C-912C-4CED-BE69-388FE96DF6E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6D47FEC0-FB14-4624-80AA-CF5884C145CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D47FEC0-FB14-4624-80AA-CF5884C145CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D47FEC0-FB14-4624-80AA-CF5884C145CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D47FEC0-FB14-4624-80AA-CF5884C145CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AC1DCF35-02C4-4B3B-8143-2FA219BD36F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AC1DCF35-02C4-4B3B-8143-2FA219BD36F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC1DCF35-02C4-4B3B-8143-2FA219BD36F9}.Release|Any CPU.ActiveCfg = Release|Any CPU

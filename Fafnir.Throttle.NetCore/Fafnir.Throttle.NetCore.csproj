@@ -10,16 +10,12 @@
 		<PackageReference Include="Microsoft.Extensions.Options" Version="3.1.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\Fafnir.Throttle\Fafnir.Throttle.csproj" />
-	</ItemGroup>
-
 	<PropertyGroup>
 		<Authors>Ramiro Di Rico</Authors>
 		<PackageProjectUrl>https://github.com/ramiro-di-rico/Fafnir</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/ramiro-di-rico/Fafnir</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>0.0.3.1</Version>
+		<Version>0.0.3.2</Version>
 	</PropertyGroup>
 
 </Project>

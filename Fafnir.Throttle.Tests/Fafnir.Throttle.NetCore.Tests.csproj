@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Fafnir.Throttle.NetCore\Fafnir.Throttle.NetCore.csproj" />
-    <ProjectReference Include="..\Fafnir.Throttle\Fafnir.Throttle.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace Fafnir.Throttle
+﻿namespace Fafnir.Throttle.NetCore
 {
     public interface IThrottleService
     {
