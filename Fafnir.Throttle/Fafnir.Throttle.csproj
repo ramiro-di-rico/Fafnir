@@ -3,13 +3,5 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-	
-  <PropertyGroup>
-    <Authors>Ramiro Di Rico</Authors>
-    <PackageProjectUrl>https://github.com/ramiro-di-rico/Fafnir</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ramiro-di-rico/Fafnir</RepositoryUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.0.2.3</Version>
-  </PropertyGroup>
 
 </Project>
