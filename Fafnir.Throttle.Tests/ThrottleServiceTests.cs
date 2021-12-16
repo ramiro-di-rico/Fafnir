@@ -1,5 +1,6 @@
 using Bogus;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Moq;
 using System;
@@ -31,7 +32,7 @@ namespace Fafnir.Throttle.NetCore.Tests
             memoryOptionsMock.Setup(x => x.Value)
                 .Returns(new MemoryCacheOptions());
 
-            var throttleService = new ThrottleService(new MemoryCache(memoryOptionsMock.Object), throttleOptionConfigurationMock.Object);
+            var throttleService = new ThrottleService(new MemoryCache(memoryOptionsMock.Object), throttleOptionConfigurationMock.Object, Mock.Of<ILogger<ThrottleService>>());
 
             //Act
             var ip = faker.Internet.Ip();
@@ -62,7 +63,7 @@ namespace Fafnir.Throttle.NetCore.Tests
             memoryOptionsMock.Setup(x => x.Value)
                 .Returns(new MemoryCacheOptions());
 
-            var throttleService = new ThrottleService(new MemoryCache(memoryOptionsMock.Object), throttleOptionConfigurationMock.Object);
+            var throttleService = new ThrottleService(new MemoryCache(memoryOptionsMock.Object), throttleOptionConfigurationMock.Object, Mock.Of<ILogger<ThrottleService>>());
 
             //Act
             var ip = faker.Internet.Ip();
@@ -93,7 +94,7 @@ namespace Fafnir.Throttle.NetCore.Tests
             memoryOptionsMock.Setup(x => x.Value)
                 .Returns(new MemoryCacheOptions());
 
-            var throttleService = new ThrottleService(new MemoryCache(memoryOptionsMock.Object), throttleOptionConfigurationMock.Object);
+            var throttleService = new ThrottleService(new MemoryCache(memoryOptionsMock.Object), throttleOptionConfigurationMock.Object, Mock.Of<ILogger<ThrottleService>>());
 
             //Act
             var ip = faker.Internet.Ip();
