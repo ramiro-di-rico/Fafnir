@@ -20,10 +20,8 @@ namespace Fafnir.Example
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddLogging();
-            services.AddMemoryCache();
             services.AddControllers();
-            services.AddThrottle();
-            services.Configure<ThrottleConfiguration>(Configuration.GetSection(ThrottleConfiguration.ConfigurationKey));
+            services.AddThrottle(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
